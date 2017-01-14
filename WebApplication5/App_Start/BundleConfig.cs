@@ -23,6 +23,11 @@ namespace WebApplication5
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            // new code - to bundle knockout.js and app.js
+            bundles.Add(new ScriptBundle("~/bundles/app").Include(
+                "~/Scripts/knockout-{version}.js",
+                "~/Scripts/app.js"));
         }
     }
 }
